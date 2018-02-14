@@ -1,0 +1,31 @@
+{
+  "name": "@evanrs/map-props",
+  "version": "1.0.0",
+  "description": "Maps props to styles",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "styled",
+    "map props"
+  ],
+  "author": "Evan Schneider",
+  "license": "ISC",
+  "peerDependencies": {
+    "lodash": "^4.17.5"
+  },
+  "dependencies": {
+    "warning": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-plugin-lodash": "^3.3.2"
+  }
+}

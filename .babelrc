@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"],
+          "esmodules": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "babel-plugin-lodash",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-do-expressions"
+  ]
+}
