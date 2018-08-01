@@ -12,6 +12,7 @@
     ]
   ],
   "plugins": [
+    "@babel/transform-flow-strip-types",
     "babel-plugin-lodash",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-do-expressions"
