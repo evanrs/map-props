@@ -63,10 +63,10 @@ export const defaultProp = (prop, mapValue) => {
 }
 
 // Select css given by
-//  - mapValue[props[prop]]
-//  - mapValue(props[prop], prop, props)
+//  - mapValue[props[propKey]]
+//  - mapValue(props, propKey, props[propKey],)
 //  - mapValue
-//  - props[prop]
+//  - props[propKey]
 const createSelectors = (prop, mapValue) => {
     const propPath = _.toPath(prop)
 
@@ -103,9 +103,17 @@ const createSelectors = (prop, mapValue) => {
                 color: (propValue, propName, ownProps) =>
                     css`color: ${propValue}`
             })
+
+         * @todo
+           mapProps({
+               color: (ownProps, propValue, propName) =>
+                   css`color: ${propValue}`
+           })
          */
         if (fn) {
             return fn(propValue, prop, props)
+            // TODO reorder to provide props as first argument
+            // return fn({ ...props, propName: prop, propValue }, prop, propValue)
         }
 
         /**
